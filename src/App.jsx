@@ -13,6 +13,8 @@ function App() {
         {puppies.map((puppy) => {
           return <p key={puppy.id}>{puppy.name}</p>;
         })}
+
+        <p>Hello World</p>
       </div>
     </>
   );
