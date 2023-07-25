@@ -7,16 +7,28 @@ function App() {
   const [puppies, setPuppies] = useState(puppyList);
   const [featPupId, setFeatPupId] = useState(null);
 
-  return (
-    <>
-      <div className="App">
-        {puppies.map((puppy) => {
-          return <p key={puppy.id}>{puppy.name}</p>;
-        })}
+  function handleClick() {
+    // some logic here
+  }
 
-        <p>Hello World</p>
-      </div>
-    </>
+  return (
+    <div className="App">
+      {featPupId}
+      onClick={()=>{ setFeatPupId(puppy.id)}}
+      {puppies.map((puppy) => {
+        
+        const featuredPup = puppies.find((pup)=> pup.id === featPupId)
+        {()=>{console.log("puppy id: ", puppy.id)}}
+        
+        return (
+          <p onClick={handleClick} key={puppy.id}
+          >
+            {puppy.name}
+            
+          </p>
+        );
+      })}
+    </div>
   );
 }
 
